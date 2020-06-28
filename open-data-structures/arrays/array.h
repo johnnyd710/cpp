@@ -1,4 +1,8 @@
+#ifndef ARRAY_H
+#define ARRAY_H
+
 #include<assert.h>
+#include <cstddef>
 
 /*
 author: john dimatteo
@@ -40,3 +44,5 @@ class MyArray {
             return *this;
         }
 };
+
+#endif
