@@ -49,7 +49,7 @@ T MyStackArray<T>::set(int i, T x) {
     return y;
 }
 
-/* adds element x to position i in the stack
+/* adds element x to position i (+ 1) in the stack
     runtime: O(n) because of resize() */
 template <class T>
 void MyStackArray<T>::add(int i, T x) {
@@ -72,7 +72,23 @@ T MyStackArray<T>::remove(int i) {
     n--;
     if (a.length > 3 * n) resize();
     return x;
-}        
+}      
+
+/*  adds element to top of the stack
+    which is the last element in the aarray 
+    runtime: O(1) amortized because of resize() */
+template <class T>
+void MyStackArray<T>::push(T x) {
+    add(n, x);
+}   
+
+/*  removes element at the top of the stack
+    which is the last element in the aarray 
+    runtime: O(1) amortized because of resize() */
+template <class T>
+T MyStackArray<T>::pop() {
+    return remove(n-1);
+}    
 
 /* define the allowable types */
 template class MyStackArray<float>;

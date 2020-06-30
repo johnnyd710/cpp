@@ -30,9 +30,23 @@ void test_remove() {
     printf("expected: 2\n");
 }
 
+void test_push_pop() {
+    MyStackArray<int> mystackarray;
+    mystackarray.push(1);
+    mystackarray.push(2);
+    mystackarray.push(3);
+    printf("result: %i \n", mystackarray.pop());
+    printf("expected: 3\n");
+    printf("result: %i \n", mystackarray.pop());
+    printf("expected: 2\n");
+}
+
 int main( ) {
     printf("running tests...\n");
     test_add();
+    printf("testing remove ...\n");
     test_remove();
+    printf("testing push pop ...\n");
+    test_push_pop();
     return 0;
 }

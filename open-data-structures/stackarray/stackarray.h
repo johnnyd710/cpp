@@ -48,7 +48,13 @@ class MyStackArray {
             and resizes to double the number of elements in the array 
             If the length is three times greater than the number of actual elements
             runtime: O(n) because of resize() */
-        T remove(int i);     
+        T remove(int i);
+
+        /* adds elements to the top of the stack */
+        void push(T x);
+
+        /* returns and removes element at the top of the stack */
+        T pop();
 };
 
 #endif
