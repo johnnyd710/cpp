@@ -35,6 +35,11 @@ class MyArray {
             return a[i];
         }
 
+        // operator overloading: for std::copy with MyArray, to return pointer at mem location
+        T* operator+(int i) {
+            return a + i;
+        }
+
         // operator overloading: assignment b = a of two arrays 
         MyArray<T>& operator=(MyArray<T> &b) {
             if (a != NULL) delete[] a;
