@@ -44,15 +44,14 @@ class MyLinkedList {
         }
 
         bool add(T x) {
-            Node<T> *u = new Node<T>(x);
-            if (n == 0) {
-                head = u;
-            } else {
-                tail->next = u;
-            }
-            tail = u;
-            n++;
-            return true;
+            // Node<T> *u = new Node<T>(x);
+            // if (head == NULL) {
+            //     head = u;
+            // } else {
+            //     tail->next = u;
+            // }
+            // n++;
+            // return true;
         }
 };
 

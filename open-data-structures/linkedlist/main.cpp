@@ -8,15 +8,15 @@
 
 void test_add() {
     MyLinkedList<int> mylinkedlist;
-    mylinkedlist.add(1);
-    mylinkedlist.add(4);
+    mylinkedlist.push(1);
     mylinkedlist.push(5);
+    mylinkedlist.push(9);
+    printf("result: %i \n", mylinkedlist.pop());
+    printf("expected: 9\n");
     printf("result: %i \n", mylinkedlist.pop());
     printf("expected: 5\n");
     printf("result: %i \n", mylinkedlist.pop());
     printf("expected: 1\n");
-    printf("result: %i \n", mylinkedlist.pop());
-    printf("expected: 4\n");
 }
 
 int main( ) {
